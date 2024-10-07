@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - npm install    # Installs project dependencies
+
+  build:
+    commands:
+      - echo "Starting build..."
+      - npm run build  # Command to build the application
+
+  post_build:
+    commands:
+      - echo "Build complete."
+
+artifacts:
+  files:
+    - '**/*'  # Defines which files to store after the build is complete
+    discard-paths: yes

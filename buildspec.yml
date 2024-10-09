@@ -10,7 +10,7 @@ phases:
        #ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
       - REGION=$us-west-2
       # Log in to your Amazon ECR registry using the AWS CLI
-      - aws ecr get 2111-2556-6057  us-west-2 $REGION | docker login indugaballipavan@gmail.com	 AWS p@v@n852-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
+      - aws ecr get 2111-2556-6057  us-west-2 $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
       # aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
       - echo Build starting...
   build:

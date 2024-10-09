@@ -17,7 +17,7 @@ phases:
     commands:
       - echo Building the Docker image...
       # Build the Docker image, replace "my-app" with your app name
-      - docker build -t my-app ./PROJECT
+      - docker build -t my-app .
       # Tag the image with ECR repository name and image tag (like "latest")
       - docker tag my-app:latest $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/my-app:latest
   post_build:
